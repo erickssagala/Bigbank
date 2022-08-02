@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    "django/login/static",
+    "app/django/login/static",
 ]
 
 # Default primary key field type
