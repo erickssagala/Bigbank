@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+#btnlink{
+    color: #fff;
+}
+/* .main-page{
+    position: relative;
+    width: 1300px;
+} */
+
+.header{
+    /* background: chartreuse; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: rgba(230, 224, 224, 0.404);
+    border-bottom: 2px solid rgb(238, 224, 224);
+    height: 50px;
+    /* position: fixed; */
+}
+.logo{
+    padding: 10px;
+    /* background-color: crimson; */
+}
+.logo-name{
+    color: rgb(214, 22, 112);
+}
+.navbar{
+    flex: 1;
+    text-align: right;
+    /* background-color: darkmagenta; */
+}
+.navbar ul{
+    /* display: inline-block; */
+    text-decoration: none;
+    
+    
+}
+.navbar ul li{
+    display: inline-block;
+    margin-right: 30px;
+    
+}
+.transdisplay{
+    position: relative;
+    display: flex;
+}
+.form-section{
+    height: 100vh;
+    padding-top: 30px;
+    align-items: center;
+    display: block;
+}
+.form-control{
+    background: #fff;
+    width: 350px;
+    height: 560px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+}
+.form-titles{
+    background: rgb(243, 241, 241);
+    justify-content: space-evenly;
+}
+.form-titles span{
+    font-size: 25px;
+    width: 350px;
+    display: flex;
+    padding: 10px 60px 5px ;
+    cursor: pointer;
+    justify-content: center;
+}
+#indicator{
+    width: 100px;
+    height: 3px;
+    border: none;
+    background-color: crimson;
+    margin-top: 5px;
+    transform: translateX(180px);
+    transition: transform .8s;
+}
+.form{
+    background: rgb(250, 248, 248);
+    width: 350px;
+    height: 560px;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    position: absolute;
+    transition: transform .8s;
+    border-radius: 3px;
+    /* text-align: center; */
+    /* margin-top: 20px; */
+}
+.form label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.form input{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    border: 1px solid rgb(153, 148, 148);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 0 10px;
+}
+.form input:focus{
+    outline: none;
+}
+.form .btn{
+    background-color: crimson;
+    color: #fff;
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btns{
+    background-color: crimson;
+    color: #fff;
+    width: 150px;
+    display: block;
+    margin: 20px 0;
+    margin-left:45% ;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btnlogout{
+    background-color: crimson;
+    color: #fff;
+    width: 100px;
+    display: block;
+    /* margin-right:50px ; */
+    
+    font-size: 15px;
+    padding: 3px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+/* #Logform{
+    left: -350px;
+} */
+
+
+/* ----------------login after Registration------------ */
+
+.login{
+    /* background-color: crimson; */
+    text-align: center;
+}
+.login h2,h3{
+    color: rgb(9, 185, 9);
+    padding: 10px;
+}
+
+
+
+/* -----------------Home section------------- */
+.home-section{
+    position: relative;
+    min-height: 100vh;
+    /* position: absolute; */
+    background-image: url('./image1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 950px auto;
+    background-attachment: fixed;
+    z-index: 1;
+    align-items: center;
+    
+    
+}
+.home-section::before{
+    content: '';
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: .8;
+    z-index: -1;
+    
+}
+.welcome{
+    width: 600px;
+    /* background-color: crimson; */
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 60px;
+    padding: 100px;
+}
+.welcome h1{
+    color: #fff;
+    font-size: 55px;
+    padding: 10px;
+}
+.welcome h2{
+    color: #fff;
+}
+.account{
+    /* background-color: #fff; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.account p{
+    color: #fff;
+    font-size: 18px;
+    padding-bottom:15px ;
+}
+.acc{
+    display: block;
+}
+
+.account .btn{
+    background-color: crimson;
+    padding: 5px 10px;
+    border: 1px solid crimson;
+    border-radius: 3px;
+    margin-top: 0px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+

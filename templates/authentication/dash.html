@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="dash.css"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dash.css' %}">
+    <!-- Material cdn -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+</head>
+<body>
+
+    {% comment %} {% if user.is_authenticated %}
+            <h3>Hello {{ firstname }}</h3>
+            <h4>Successfully Logged in!</h4>
+            <button type="submit" class="btnlogout"><a href="/logout" id="btnlink">LogOut</a></button>
+            {% else %}
+            {% comment %} <button type="submit"><a href="/signup">SignUp</a></button>
+            <button type="submit"><a href="/login">LogIn</a></button> {% endcomment %}
+
+            {% comment %} <div class="form-section">
+                <button type="submit" class="btns"><a href="/signup" id="btnlink">Register</a></button>
+                <button type="submit" class="btns"><a href="/login" id="btnlink">Login</a></button>
+            </div>
+
+            {% endif %} {% endcomment %} 
+
+
+
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="{% static 'benz.jpg' %}" alt="img">
+                    <h2>BIG<span class="danger">BANK</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#dash-section" id="Dashboard" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3 id="menu-heading">Dashboard</h3>
+                </a>
+
+                <a href="#cust-section" id="Customers">
+                    <span class="material-icons-sharp">person</span>
+                    <h3 id="menu-heading">Customers</h3>
+                </a>
+
+                <a href="#depo-section" id="Deposit">
+                    <span class="material-icons-sharp">paid</span>
+                    <h3 id="menu-heading">Deposit</h3>
+                </a>
+
+                <a href="#with-section" id="Withdraw">
+                    <span class="material-icons-sharp">attach_money</span>
+                    <h3 id="menu-heading">Withdraw</h3>
+                </a>
+
+                <a href="#sett-section" id="Settings">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3 id="menu-heading">Settings</h3>
+                </a>
+
+                <a href="#mess-section" id="Messages">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3 id="menu-heading">Messages</h3>
+                    <span class="message-count">26</span>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Body -->
+        <main>
+            <!-- <h1>Dashboard</h1> -->
+            <!-- <div class="date">
+                <input type="date">
+            </div> -->
+            <div class="main-section-1">
+                <h2 id="body-heading">Dashboard</h2>
+            </div>
+            <div class="main-section" id="main-section">
+                <section class="inner-body" id="dash-section">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+
+                <section class="inner-body" id="cust-section">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+
+                <section class="inner-body" id="depo-section"
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+                
+                <section class="inner-body" id="with-section">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+                
+                <section class="inner-body" id="sett-section">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+                
+                <section class="inner-body" id="mess-section">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam maxime, dolor enim voluptatibus eveniet quod quo rem quibusdam similique, dolorem soluta, dolorum corporis velit praesentium veniam nobis nostrum fugit possimus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic iure ea? Voluptates harum tempora corporis illo iure velit, ipsum numquam sit dicta, vitae a, unde ipsa minima sunt reiciendis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime cupiditate corporis error culpa, facilis ad aut nostrum tempora id aliquam omnis tenetur similique molestiae excepturi minus laudantium perferendis sunt?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quibusdam commodi id itaque voluptates quam aut alias repudiandae sapiente natus modi quia laboriosam dolor perferendis, similique perspiciatis? Ipsa, quas odio.
+                    </p>
+                </section>
+                
+            </div>
+
+
+        </main>
+
+        <!-- --Right sidebar -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+                <div class="theme">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>{{ firstname }}</b></p>
+                        <small class="text-muted">Treasurer</small>
+                    </div>
+
+                    <div class="profile-photo">
+                        <img src="{% static 'Mercedes.jpg' %}" alt="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% comment %} <script src="./dash.js"></script> {% endcomment %}
+    <script src="{% static 'dashb.js' %}"></script>
+</body>
+</html>
