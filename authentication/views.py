@@ -55,7 +55,7 @@ def signup(request):
 
         #Welcome Email
         Subject = "Welcome to BigBank"
-        message = "Hello"+ myuser.first_name + "!! \n" + "Welcome to BigBank!! \n Thank you for visiting our website \n We have also sent you a confirmation email, Please confirm your Email address to activate your account. \n\n Thank you \nBigBank"
+        message = "Hello"+ myuser.first_name + "!! \n" + "Welcome to BigBank!! \n Thank you for visiting our website \n We have also sent you a confirmation email, Please confirm your Email address to activate your account. \n Thank you \nBigBank"
         from_email = settings.EMAIL_HOST_USER
         to_list = [myuser.email]
         send_mail(Subject, message, from_email, to_list, fail_silently = True)
@@ -97,7 +97,7 @@ def login(request):
             messages.error(request, "Incorrect details! Please activate your account Or Sign up to create account")
             return render(request, 'authentication/home_page.html')
 
-    return render(request, "authentication/login.html")
+    return render(request, "authentication/home_page.html")
 
 def verification_failed(request):
     pass

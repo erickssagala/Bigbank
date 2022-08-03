@@ -44,6 +44,11 @@ sideBarMenu.forEach(element=>{
         element.classList.add("active");
 
         sectionHeading.innerHTML = element.id;
+
+        if(window.matchMedia("(max-width:700px)")){
+            sideMenu.style.display = 'none';
+        }
+
     })
     
 })
