@@ -10,6 +10,7 @@
     --color-info-dark:#7d8da1;
     --color-info-light:#dce1eb;
     --color-dark:#363949;
+    --color-black:#000000;
     --color-light:rgba(132, 139, 200, 0.18);
     --color-primary-variant:#111e88;
     --color-dark-variant:#677483;
@@ -24,17 +25,20 @@
     --padding-1:1.2rem;
 
     --box-shadow:0 2rem 3rem var(--color-light);
+
+    --background-image: url('beach1.jpg');
     
 }
 
 /* ----------DARK THEME------------ */
 .dark-theme{
     --color-background:#181a1e;
-    --color-white:#202528;
+    --color-danger:rgb(3, 66, 61);
     --color-dark:#edeffd;
     --color-dark-variant:#a3bdcc;
-    --color-light:rgba(0,0,0,0.4);
+    /* --color-light:rgba(0,0,0,0.4); */
     --box-shadow:0 2rem 3rem var(--color-light);
+    --background-image: url('benz.jpg');
     
 }
 
@@ -74,7 +78,7 @@ body{
     grid-template-columns: 14rem auto 23rem;
     justify-content: space-between;
 
-    background-image: url('beach1.jpg');
+    background-image: var(--background-image);
     position: relative;
     background-size: 100vw 100vh;
     background-position: center center;
@@ -85,7 +89,7 @@ body{
 }
 .container::before{
     content: '';
-    background-color:black;
+    background-color:#000;
     height: 100vh;
     width: 100vw;
     /* position: absolute; */
@@ -135,6 +139,9 @@ h1{
     font-size: 1.8rem;
     color: var(--color-white);
 }
+.material-icons-sharp{
+    color: #fff;
+}
 
 h2{
     font-size: 1.8rem;
@@ -143,7 +150,7 @@ h2{
 
 h3{
     font-size: 0.87rem;
-    color: var(--color-white);
+    color: #fff;
 }
 
 h4{
@@ -169,7 +176,7 @@ small{
 }
 
 .text-muted{
-    color: var(--color-info-dark);
+    color: #fff;
 }
 
 p{
@@ -190,7 +197,7 @@ b{
 }
 
 .danger{
-    color: var(--color-danger);
+    color: rgb(250, 11, 59);
 }
 
 .success{
@@ -398,7 +405,7 @@ main .inner-body{
     outline: none;
 }
 .form .btn{
-    background-color: crimson;
+    background-color: var(--color-danger);
     color: #fff;
     width: 30%;
     /* display: block; */
@@ -443,9 +450,11 @@ main .main-section-11 span{
 }
 #indicator{
     width: 100px;
-    height: 3px;
+    height: 5px;
     border: none;
-    background-color: crimson;
+    background-color: var(--color-danger);
+    border: .1px solid #fff;
+    border-radius: var(--border-radius-3);
     margin-top:3.2rem;
     transform: translateX(-60px);
     transition: transform .8s;
@@ -502,12 +511,12 @@ main .date input[type="date"]{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-dark);
+    color: var(--color-black);
 }
 
 .right .theme span.active{
-    background: var(--color-primary);
-    color: var(--color-dark);
+    background: var(--color-danger);
+    color: #fff;
     border-radius: var(--border-radius-1);
 }
 
