@@ -143,6 +143,12 @@ h1{
     color: #fff;
 }
 
+.menu{
+    color: var(--color-danger);
+}
+.sharp{
+    color: #fff;
+}
 h2{
     font-size: 1.8rem;
     color: var(--color-white);
@@ -568,7 +574,10 @@ main .date input[type="date"]{
         width: 100%;
     }
     .form input{
-        width: 92%;
+        width: 70%;
+    }
+    #login-form{
+        left: -620px;
     }
     .right{
         right: 3rem;
@@ -593,7 +602,7 @@ main .date input[type="date"]{
     aside{
        position: fixed;
        left: -100%;
-       background: var(--color-dark);
+       background: #363949;
        width: 18rem;
        z-index: 3;
        box-shadow: 2rem 4rem 5rem var(--color-light);
@@ -689,7 +698,7 @@ main .date input[type="date"]{
         /* border-bottom:  crimson solid 2px; */
     }
     .form input{
-        width: 92%;
+        width: 70%;
         font-size: 12px;
         margin-bottom: 2px;
     }
@@ -700,6 +709,10 @@ main .date input[type="date"]{
 
     .form .btn{
         width: 50%;
+    }
+
+    #login-form{
+        left: -620px;
     }
 
     #indicator{

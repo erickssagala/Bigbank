@@ -45,8 +45,14 @@ sideBarMenu.forEach(element=>{
 
         sectionHeading.innerHTML = element.id;
 
-        if(window.matchMedia("(max-width:700px)")){
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+
+        if(window.innerWidth <= 768){
             sideMenu.style.display = 'none';
+        }
+        else{
+            sideMenu.style.display = "block";
         }
 
     })
