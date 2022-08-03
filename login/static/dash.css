@@ -588,7 +588,7 @@ main .date input[type="date"]{
        width: 18rem;
        z-index: 3;
        box-shadow: 2rem 4rem 5rem var(--color-light);
-       height: 96vh;
+       height: 88vh;
        padding-right: var(--card-padding);
        display: none;
        animation: showMenu 400ms ease forwards;
