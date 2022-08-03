@@ -553,7 +553,7 @@ main .date input[type="date"]{
         /* border: crimson solid 2px; */
     }
     main .main-section{
-        width: 100%;
+        width: 85vw;
     }
     .form{
         width: 100%;
@@ -571,12 +571,14 @@ main .date input[type="date"]{
 /* ------------------MEDIA QUERIES----Phones---------------- */
 @media screen and (max-width: 768px) {
     /* body{
-        background: red;
+        
     } */
     .container{
+        margin-top: 3rem;
         width: 100vw;
         height: 100vh;
-        grid-template-columns:0 auto 7rem;
+        grid-template-columns:0 auto 6rem;
+        background-size: 100% 100%;
     }
 
     aside{
@@ -586,7 +588,7 @@ main .date input[type="date"]{
        width: 18rem;
        z-index: 3;
        box-shadow: 2rem 4rem 5rem var(--color-light);
-       height: 100vh;
+       height: 96vh;
        padding-right: var(--card-padding);
        display: none;
        animation: showMenu 400ms ease forwards;
@@ -631,15 +633,15 @@ main .date input[type="date"]{
         /* left: -120px; */
         margin-top: 6rem;
         padding: 2rem 1rem;
-        width: 100vw;
+        width: 96vw;
         height: 90vh;
     }
     /* main .main-section-1{
         margin-top:0;
     } */
     main .main-section{
-        margin: 0.1rem 0.5rem;
-        height: 90%;
+        /* margin: 0.1rem 0.5rem; */
+        height: 80%;
         /* background: var(--color-white); */
         align-items: center;
         justify-content: center;
@@ -661,9 +663,10 @@ main .date input[type="date"]{
     }
 
     main .inner-body{
-        height: 80%;
+        height: 100%;
         width: 100%;
-        overflow: auto;
+        /* border: crimson solid 1px; */
+        /* overflow: auto; */
     }
 
     .inner-body form .form-column{
@@ -674,6 +677,7 @@ main .date input[type="date"]{
 
     .form{
         width: 100%;
+        /* border-bottom:  crimson solid 2px; */
     }
     .form input{
         width: 92%;
@@ -697,8 +701,9 @@ main .date input[type="date"]{
 
 
     .right{
-        /* width: 80%; */
-        margin: 0 auto 4rem;
+        /* width: 10vw; */
+        margin: 0 auto 6rem;
+        /* display: none; */
         /* border: crimson solid 2px; */
     }
 
