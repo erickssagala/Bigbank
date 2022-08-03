@@ -10,7 +10,12 @@ sectionHeading = document.getElementById("body-heading");
 
 menuHeadings = document.getElementById("menu-heading");
 
-
+//-------------changing form section on home-page------------------
+const indicator = document.getElementById("indicator");
+const login = document.getElementById("login");
+const register = document.getElementById("register");
+const regForm = document.getElementById("register-form");
+const logForm = document.getElementById("login-form");
 
 //show sidebar
 menuBtn.addEventListener('click', ()=>{
@@ -45,5 +50,17 @@ sideBarMenu.forEach(element=>{
 
 
 
+    
+
+    login.onclick = (e)=>{
+        indicator.style.transform = "translateX(-200px)";
+        logForm.style.transform = "translateX(573px)";
+        regForm.style.transform = "translateX(650px)";
+    }
+    register.onclick = (e)=>{
+        indicator.style.transform = "translateX(-60px)";
+        logForm.style.transform = "translateX(0px)";
+        regForm.style.transform = "translateX(0px)";
+    }
 
 

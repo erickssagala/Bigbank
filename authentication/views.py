@@ -13,7 +13,7 @@ from . tokens import generate_token
 
 # Create your views here.
 def home(request):
-    return render(request, "authentication/index.html")
+    return render(request, "authentication/home_page.html")
 
 def signup(request):
     if request.method == "POST":
@@ -75,12 +75,12 @@ def signup(request):
             settings.EMAIL_HOST_USER,
             [myuser.email],
         )
-        email.fail_silently = True
+        email.fail_silently = False
         email.send()
         
-        return redirect('login')
+        return redirect('home')
 
-    return render(request, "authentication/signup.html")
+    return render(request, "authentication/home_page.html")
 
 def login(request):
     if request.method == "POST":
@@ -95,7 +95,7 @@ def login(request):
             return render(request, "authentication/dash.html", {'firstname':firstname})
         else:
             messages.error(request, "Incorrect details! Please activate your account Or Sign up to create account")
-            return render(request, 'authentication/verification_failed.html')
+            return render(request, 'authentication/home_page.html')
 
     return render(request, "authentication/login.html")
 

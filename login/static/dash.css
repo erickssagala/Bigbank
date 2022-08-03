@@ -3,7 +3,7 @@
 /* ROOT VARIABLES */
 :root{
     --color-primary:#7380ec;
-    --color-danger:#e6004c;
+    --color-danger:rgb(250, 11, 59);
     --color-success:#41f1b6;
     --color-warning:#ffbb55;
     --color-white:#fff;
@@ -54,11 +54,13 @@ html{
 }
 
 body{
+    /* position: absolute; */
     width: 100vw;
     height: 100vh;
     font-family: poppins, sans-serif;
     font-size: 0.88rem;
     background: var(--color-background);
+    /* background: #41f19f; */
     user-select: none;
     overflow-x: hidden;
 }
@@ -66,16 +68,60 @@ body{
 .container{
     display: grid;
     margin: 0 auto;
-    width: 96vw;
+    width: 100vw;
     height: 100vh;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
     justify-content: space-between;
+
+    background-image: url('beach1.jpg');
+    position: relative;
+    background-size: 100vw 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    /* align-items: center; */
 }
+.container::before{
+    content: '';
+    background-color:black;
+    height: 100vh;
+    width: 100vw;
+    /* position: absolute; */
+    opacity: .6;
+    z-index: -1;
+    
+} 
+
+/* -----------------background image in major container------------- */
+/* .home-section{
+    position: relative;
+    min-height: 100vh;
+    background-image: url('benz.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 950px auto;
+    background-attachment: fixed;
+    z-index: 1;
+    align-items: center;
+    
+    
+}
+.home-section::before{
+    content: '';
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: .8;
+    z-index: -1;
+    
+} */
 
 
 a{
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 img{
@@ -87,31 +133,32 @@ img{
 h1{
     font-weight:800;
     font-size: 1.8rem;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 h2{
     font-size: 1.8rem;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 h3{
     font-size: 0.87rem;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 h4{
     font-size: 0.8rem;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 h5{
     font-size:0.77rem;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 small{
     font-size: 0.75rem;
+    color: var(--color-white);
 }
 
 .profile-photo{
@@ -126,11 +173,16 @@ small{
 }
 
 p{
-    color:var(--color-dark-variant);
+    color:var(--color-white);
 }
 
 b{
-    color: var(--color-dark);
+    color: var(--color-white);
+    background: var(--color-danger);
+    border: var(--color-danger) solid 1px;
+    border-radius: var(--border-radius-3);
+    width: fit-content;
+    padding: 2px;
 }
 
 .primary{
@@ -153,15 +205,19 @@ b{
 
 /* aside---top*/
 aside{
-    height: 100vh;
-    background: var(--color-white);
+    height: 96vh;
+    position:fixed;
+    /* background: var(--color-white); */
+    border-radius: var(--border-radius-2);
+    margin: 1rem 0 1rem 1rem;
+    /* display: none; */
 }
 aside .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
-    background: var(--color-white);
+    /* background: var(--color-white); */
 }
 aside .logo{
     display: flex;
@@ -174,7 +230,7 @@ aside .logo img{
 }
 
 .close{
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 aside .close{
@@ -188,7 +244,7 @@ aside .sidebar{
     height: 80vh;
     position: relative;
     top: 3rem;
-    background: var(--color-white);
+    /* background: var(--color-white); */
 }
 aside h3{
     font-weight: 500;
@@ -210,13 +266,13 @@ aside .sidebar a span{
 }
 aside .sidebar a:last-child{
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     width: 100%;
 }
 
 aside .sidebar a.active{
-    background: var(--color-light);
-    color: var(--color-primary);
+    background: var(--color-danger);
+    color: var(--color-white);
     margin-left: 0;
     border-radius: 1rem;
 }
@@ -225,17 +281,17 @@ aside .sidebar a.active::before{
     content: "";
     width: 6px;
     height: 100%;
-    background: var(--color-primary);
+    background: var(--color-white);
     border-radius: 1rem;
 }
 
 aside .sidebar a.active span{
-    color: var(--color-primary);
+    color: var(--color-white);
     margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover{
-    color: var(--color-primary);
+    color: var(--color-danger);
 }
 
 aside .sidebar a:hover span{
@@ -260,45 +316,144 @@ main{
     height: 96vh;
     padding: 1.6rem;
     align-items: center;
+    /* display: none; */
 }
 
 main .main-section{
     /* border: #e6004c solid 2px; */
     margin-top: 0.1rem;
     height: 80%;
-    background: var(--color-white);
+    /* background: var(--color-white); */
     align-items: center;
     justify-content: center;
     padding: 1rem;
     border-radius: var(--border-radius-2);
     overflow: hidden;
+    /* z-index: 1; */
 }
 main .inner-body{
     /* border: #e6004c solid 2px; */
     position: relative;
     margin-top: 0.1rem; 
     height: 440px; 
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    background: var(--color-white);
-    align-items: center;
+    /* background: var(--color-white); */
+    /* align-items: center; */
     justify-content: center;
     padding: 1rem;
     border-radius: var(--border-radius-2);
     overflow: hidden;
     margin-bottom: 2.5rem; 
+    /* z-index: 1; */
 }
-main .main-section-1{
+
+.inner-body form .form-column{
+    float: left;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+
+.form{
+    /* background: rgb(250, 248, 248); */
+    height: 430px;
+    width: 90%;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    position: absolute;
+    transition: transform .8s;
+    border-radius: 5px;
+    font-family: poppins, sans-serif;
+    color: var(--color-white);
+    /* text-align: center; */
+    /* margin-top: 20px; */
+}
+
+#login-form{
+    left: -573px;
+}
+
+.form label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.form input{
+    width: 80%;
+    margin-bottom: 5px;
+    height: 30px;
+    border: 1px solid rgb(153, 148, 148);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: center;
+}
+.form input:focus{
+    outline: none;
+}
+.form .btn{
+    background-color: crimson;
+    color: #fff;
+    width: 30%;
+    /* display: block; */
+    /* bottom: 2rem; */
+    font-size: 15px;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.form #btn-login{
+    margin-top:3rem ;
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+
+
+
+main .main-section-1, .main-section-11{
     margin: 0.1rem;
     height: 50px;
     display: flex;
-    background: var(--color-white);
+    /* background: var(--color-white); */
+    background: transparent;
+    color: white;
     align-items: center;
     justify-content: center;
     padding: 1rem;
     border-radius: var(--border-radius-2);
+    /* z-index: 1; */
 }
 
-main .date{
+main .main-section-11 span{
+    font-size: 25px;
+    width: 100px;
+    display: inline-block;
+    padding: 10px 60px 5px ;
+    cursor: pointer;
+}
+#indicator{
+    width: 100px;
+    height: 3px;
+    border: none;
+    background-color: crimson;
+    margin-top:3.2rem;
+    transform: translateX(-60px);
+    transition: transform .8s;
+}
+
+
+
+/* main .date{
     display: inline-block;
     background: var(--color-light);
     border-radius: var(--border-radius-1);
@@ -310,12 +465,13 @@ main .date input[type="date"]{
     background: transparent;
     color: var(--color-dark);
     font-family: poppins, sans-serif;
-}
+} */
 
 
 /* -------RIGHT SIDEBAR-------- */
 .right{
     margin-top: 1.4rem;
+    /* display: none; */
 }
 
 .right .top{
@@ -329,7 +485,7 @@ main .date input[type="date"]{
 }
 
 .right .theme{
-    background: var(--color-light);
+    background: var(--color-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -371,8 +527,8 @@ main .date input[type="date"]{
     } */
 
     .container{
-        width: 94%;
-        grid-template-columns:7rem auto 23rem;
+        /* width: 100vw; */
+        grid-template-columns:6rem auto 12rem;
     }
 
     aside .logo h2{
@@ -389,7 +545,25 @@ main .date input[type="date"]{
 
     aside .sidebar a:last-child{
         position: relative;
-        margin-top: 1.8rem;
+        margin-top: 5.6rem;
+    }
+    main{
+        width: 60vw;
+        height: 96vh;
+        /* border: crimson solid 2px; */
+    }
+    main .main-section{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+    .form input{
+        width: 92%;
+    }
+    .right{
+        right: 3rem;
+        /* border: crimson solid 2px; */
     }
 }
 
@@ -400,16 +574,18 @@ main .date input[type="date"]{
         background: red;
     } */
     .container{
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns:0 auto 7rem;
     }
 
     aside{
        position: fixed;
        left: -100%;
-       background: var(--color-white);
+       background: var(--color-dark);
        width: 18rem;
        z-index: 3;
-       box-shadow: 1rem 3rem 4rem var(--color-light);
+       box-shadow: 2rem 4rem 5rem var(--color-light);
        height: 100vh;
        padding-right: var(--card-padding);
        display: none;
@@ -442,17 +618,19 @@ main .date input[type="date"]{
     }
 
     aside .sidebar a:last-child{
-        position: absolute;
-        bottom: 2rem;
+        position: relative;
+        bottom: 5.6rem;
     }
 
     aside .close{
         display: inline-block;
         cursor: pointer;
+        color: var(--color-white);
     }
     main{
+        /* left: -120px; */
         margin-top: 6rem;
-        padding: 0 1rem;
+        padding: 2rem 1rem;
         width: 100vw;
         height: 90vh;
     }
@@ -461,20 +639,67 @@ main .date input[type="date"]{
     } */
     main .main-section{
         margin: 0.1rem 0.5rem;
-        height: 85%;
-        background: var(--color-white);
+        height: 90%;
+        /* background: var(--color-white); */
         align-items: center;
         justify-content: center;
         padding: 1rem;
     }
-
-    main .inner-body{
-        height: 520px;
+    main .main-section-1{
+        font-size: 16px;
+        /* top: 4rem; */
+    }
+    main .main-section-1, .main-section-11{
+        width: 100%;
+        height: 40px;
+        /* background: #41f1b6; */
+    }
+    main .main-section-11 span{
+        font-size: 18px;
+        padding: 5px 30px 2.5px ;
+        /* background: #111e88; */
     }
 
+    main .inner-body{
+        height: 80%;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .inner-body form .form-column{
+        float: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .form{
+        width: 100%;
+    }
+    .form input{
+        width: 92%;
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    .form label{
+        margin-bottom: 2px;
+        font-size: 13px;
+    }
+
+    .form .btn{
+        width: 50%;
+    }
+
+    #indicator{
+        width: 80px;
+        margin-top:3rem;
+        transform: translateX(-75px);
+    }
+
+
     .right{
-        width: 94%;
+        /* width: 80%; */
         margin: 0 auto 4rem;
+        /* border: crimson solid 2px; */
     }
 
     .right .top{
@@ -483,11 +708,11 @@ main .date input[type="date"]{
         left: 0;
         align-items: center;
         padding: 0, 0.8rem;
-        height: 4.6rem;
+        height: 4rem;
         background: var(--color-white);
         width: 100%;
         margin: 0;
-        z-index: 2;
+        z-index: .8;
         box-shadow: 0 1rem 1rem var(--color-light);
     }
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Page</title>
+    <!-- <link rel="stylesheet" href="dash.css"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dash.css' %}">
+    <!-- Material cdn -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+</head>
+<body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+    {% comment %} {% if user.is_authenticated %}
+            <h3>Hello {{ firstname }}</h3>
+            <h4>Successfully Logged in!</h4>
+            <button type="submit" class="btnlogout"><a href="/logout" id="btnlink">LogOut</a></button>
+            {% else %}
+            {% comment %} <button type="submit"><a href="/signup">SignUp</a></button>
+            <button type="submit"><a href="/login">LogIn</a></button> {% endcomment %}
+
+            {% comment %} <div class="form-section">
+                <button type="submit" class="btns"><a href="/signup" id="btnlink">Register</a></button>
+                <button type="submit" class="btns"><a href="/login" id="btnlink">Login</a></button>
+            </div>
+
+            {% endif %} {% endcomment %} 
+
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="{% static 'benz.jpg' %}" alt="img">
+                    <h2>BIG<span class="danger">BANK</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#home-section" id="Welcome To BigBank!" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3 id="menu-heading">Home</h3>
+                </a>
+
+                <a href="#" id="Services">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                    <h3 id="menu-heading">Services</h3>
+                </a>
+
+                <a href="#" id="contact">
+                    <span class="material-icons-sharp">contact_support</span>
+                    <h3 id="menu-heading">contact</h3>
+                </a>
+
+                <a href="#" id="About">
+                    <span class="material-icons-sharp">info</span>
+                    <h3 id="menu-heading">About</h3>
+                </a>
+
+            </div>
+        </aside>
+
+        <!-- Main Body -->
+        <main>
+            <!-- <h1>Dashboard</h1> -->
+            <!-- <div class="date">
+                <input type="date">
+            </div> -->
+            <div class="main-section-1">
+                <h2 id="body-heading">Welcome To BigBank!</h2>
+            </div>
+
+            <div class="main-section-11">
+                <span id="login">Login</span>
+                <span id="register">Register</span> 
+                <hr id="indicator">
+            </div>
+            <div class="main-section" id="main-section">
+                <section class="inner-body" id="home-section">
+                    <form action="/signup" method="POST" for="Register" class="form" id="register-form">
+                        {% csrf_token %}
+                        <div class="form-column">
+                            <label for="">Username</label>
+                            <input type="text" name="username" id="username" placeholder="ericknabstar125" Required>
+                            <br>
+                            <label for="">firstname</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="firstname" Required>
+                            <br>
+                            <label for="">lastname</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="lastname" Required>
+                            {% comment %} <br>
+                            <label for="">category</label>
+                            <input type="text" name="category" id="category" placeholder="category" Required>
+                            <br>
+                            
+                            <label for="">lastname</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="lastname" Required>
+                            <br> {% endcomment %}
+                            
+                        </div>
+                        <div class="form-column">
+                            <label for="">Email</label>
+                            <input type="email" name="email" id="email" placeholder="email@email.com" Required>
+                            <br>
+                            <label for="">Password</label>
+                            <input type="password" name="pass1" id="pass1" placeholder="password" Required>
+                            <br>
+                            <label for="">Confirm Password</label>
+                            <input type="password" name="pass2" id="pass2" placeholder="Confirm-password" Required>
+                            <br>
+                            {% comment %} <label for="">lastname</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="lastname" Required>
+                            <br>
+                            <label for="">lastname</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="lastname" Required>
+                            <br> {% endcomment %}
+                           
+                        </div>
+
+                        <button type="submit" class="btn" id="btn-register">Register</button>
+                    </form>
+
+                    <form action="/login" method="POST" for="Login" class="form" id="login-form">
+                        {% csrf_token %}
+                        <label for="">Username</label>
+                        <input type="text" name="username" id="username" placeholder="ericknabstar125" Required>
+                        <br>
+                        <label for="">Password</label>
+                        <input type="password" name="pass1" id="pass1" placeholder="password" Required>
+                        <br>
+                        
+                        <button type="submit" class="btn" id="btn-login">Login</button>
+                    </form>
+
+                </section>
+                
+                <section class="inner-body" id="serv-section">
+
+                </section>
+                
+                <section class="inner-body" id="cont-section">
+
+                </section>
+                
+                <section class="inner-body" id="abou-section">
+
+                </section>
+                
+            </div>
+
+
+        </main>
+
+        <!----Right sidebar -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+                <div class="theme">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% comment %} <script src="./dash.js"></script> {% endcomment %}
+    <script src="{% static 'dashb.js' %}"></script>
+</body>
+</html>
