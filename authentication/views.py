@@ -35,9 +35,11 @@ def signup(request):
 
         if len(username)>10 or len(username)<6:
             messages.error(request, "username must be between 6 and 10 characters long!")
+            return redirect('home')
 
         if pass1 != pass2:
             messages.error(request, "passwords didn't match!")
+            return redirect('home')
 
         if not username.isalnum():
             messages.error(request, "username must be alpha numeric!")

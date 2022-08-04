@@ -43,10 +43,9 @@ sideBarMenu.forEach(element=>{
 
         element.classList.add("active");
 
-        sectionHeading.innerHTML = element.id;
-
-        console.log(window.innerWidth);
-        console.log(window.innerHeight);
+        if(element.id != "logout-btn"){
+            sectionHeading.innerHTML = element.id;
+        }
 
         if(window.innerWidth <= 768){
             sideMenu.style.display = 'none';
