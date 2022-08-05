@@ -175,7 +175,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../image/money1.jpg) no-repeat;
+    background: url(../image/benz3.jpeg) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 17rem;
@@ -187,17 +187,24 @@ section{
     width:60rem;
 }
 
+.home .content h1{
+    color:var(--white);
+    font-size: 5rem;
+}
+
 .home .content h2{
     color:var(--white);
     font-size: 3rem;
+    margin-top: 2rem;
 }
 
-.home .content h2 span{
+.home .content h1 span, .home .content h2 span{
     color:var(--crimson-like);
 }
 
 .home .content #home-btn{
     color: var(--white);
+    margin-top: 4rem;
 }
 
 
