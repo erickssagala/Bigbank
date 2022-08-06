@@ -106,6 +106,9 @@ def verification_failed(request):
 def dash(request):
     pass
 
+def signup_page(request):
+    return render(request, "authentication/signup_page.html")
+
 def logout(request):
     user_logout(request)
     messages.success(request, "Logout successful!")

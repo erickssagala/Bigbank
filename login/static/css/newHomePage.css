@@ -17,7 +17,7 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
 }
 
@@ -42,6 +42,10 @@ section{
     padding-bottom: 3rem;
     font-size: 3.5rem;
     color:var(--black);
+}
+
+#header-icons #btn-login{
+    display: none;
 }
 
 .heading span{
@@ -136,19 +140,20 @@ section{
     text-align: center;
 }
 
+
 .header .login-form.active{
     right:2rem;
     transition: .4s linear;
 }
 
-.header .login-form h3{
+.header .login-form h3, .home .signup-form h3{
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--black);
 }
 
-.header .login-form .box{
-    width: 100%;
+.header .login-form .box, .home .signup-form .box{
+    width: 90%;
     margin:.7rem 0;
     background:#eee;
     border-radius: .5rem;
@@ -158,13 +163,13 @@ section{
     text-transform: none;
 }
 
-.header .login-form p{
+.header .login-form p, .home .signup-form p, .label{
     font-size: 1.4rem;
     padding:.5rem 0;
     color:var(--light-color);
 }
 
-.header .login-form p a{
+.header .login-form p a, .home .signup-form p a{
     color:var(--crimson-like);
     text-decoration: underline;
 }
@@ -182,9 +187,27 @@ section{
     padding-bottom: 10rem;
 }
 
+.home .signup-form{
+    width:60rem;
+    height: 45rem;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .signup-form .form-column{
+    float: left;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
 .home .content{
     text-align: center;
-    width:60rem;
+    margin: auto;
 }
 
 .home .content h1{
@@ -200,6 +223,11 @@ section{
 
 .home .content h1 span, .home .content h2 span{
     color:var(--crimson-like);
+}
+
+.home .content #btn-login{
+    color: var(--white);
+    margin-top: 4rem;
 }
 
 .home .content #home-btn{
@@ -426,9 +454,6 @@ section{
         display: inline-block;
     }
 
-    .header .search-form{
-        width:90%;
-    }
 
     .header .navbar{
         position: absolute;
@@ -449,6 +474,17 @@ section{
         margin:2rem 2.5rem;
         display: block;
     }
+    .home .signup-form{
+        width: 35rem;
+        height: 65rem;
+    }
+
+    .home .signup-form .form-column{
+        float: inline-end;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
 
 }
 
@@ -457,6 +493,7 @@ section{
     html{
         font-size: 50%;
     }
+
 
     .heading{
         font-size: 2.5rem;

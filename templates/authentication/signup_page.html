@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup_page</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/newHomePage.css' %}">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+    <a href="{% url 'home' %}" class="logo"> <i class="fas fa-shopping-basket"></i> BIGBANK</a>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#home">SignUp</a>
+        <a href="#footer">Contact</a>
+    </nav>
+
+    <div class="icons" id="header-icons">
+        <a class="btn" id="btn-login">Login</a>
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+       
+    </div>
+
+
+    <form action="/login" method="POST" class="login-form">
+        {% csrf_token %}
+        <h3>Login Now</h3>
+        <input type="text" name="username" class="box" id="username" placeholder="ericknabstar125" Required>
+        <input type="password" name="pass1" class="box" id="pass1" placeholder="password" Required>
+        <input type="submit" value="login now" class="btn">
+        <p>forgot your password? <a href="#">click here</a></p>
+        <p>Don't have an account? <a href="#">create now</a></p>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home home-signup" id="home">
+
+    <div class="content">
+        <form action="/signup" method="POST" class="signup-form">
+            {% csrf_token %}
+            <h3>SignUp Now</h3>
+            <br>
+            <div class="form-column">
+                <label for="" class="label">Username</label>
+                <input type="text" name="username" class="box" id="username" placeholder="ericknabstar125" Required>
+                <br>
+                <label for="" class="label">firstname</label>
+                <input type="text" name="firstname" class="box" id="firstname" placeholder="firstname" Required>
+                <br>
+                <label for="" class="label">lastname</label>
+                <input type="text" name="lastname" class="box" id="lastname" placeholder="lastname" Required>
+
+            </div>
+
+            <div class="form-column">
+                <label for="" class="label">Email</label>
+                <br>
+                <input type="email" name="email" class="box" id="email" placeholder="email@email.com" Required>
+                <br>
+                <label for="" class="label">Password</label>
+                <input type="password" name="pass1" class="box" id="pass1" placeholder="password" Required>
+                <br>
+                <label for="" class="label">Confirm Password</label>
+                <input type="password" name="pass2" class="box" id="pass2" placeholder="Confirm-password" Required>
+                <br>
+
+            </div>
+            <br>
+            <input type="submit" value="SignUp" class="btn">
+        </form>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> <i class="fas fa-shopping-basket"> </i> BIGBANK</i> </h3>
+            <p>Some Thing About BigBank</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +256-700-0000 </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +256-700-0000 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> bigbank4322@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Makerere, Kampala Uganda </a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> SignUp </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="{% static 'image/payment.png' %}" alt="img" class="payment-img">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> ericknabstar </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<!-- <script src="js/script.js"></script> -->
+
+<script src="{% static 'js/newHomePage.js' %}"></script>
+
+</body>
+</html>
