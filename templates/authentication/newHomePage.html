@@ -20,26 +20,18 @@
 <body>
 
     
-    
+    <div class="display-message" id = "display-message">
+        <p id = "message-p">
+            {% for message in messages %}
+                
+                {{ message }}
+                    
+            {% endfor %}
+        </p>
+    </div>
 <!-- header section starts  -->
 
 <header class="header">
-
-
-
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    {% endfor %}
-
-
-
-
-
 
     <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> BIGBANK</a>
 

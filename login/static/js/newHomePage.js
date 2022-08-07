@@ -2,6 +2,18 @@
 {
   let navbar = document.querySelector('.navbar');
   let loginForm = document.querySelector('.login-form');
+  let messageP = document.getElementById('message-p');
+
+
+  window.onload = function changeErrorColor(){
+    if (messageP.message = 'error'){
+      messageP.style.color = 'red';
+    }
+    else{
+      messageP.style.color = 'green';
+    }
+  }
+
 
   document.getElementById('login-btn').onclick = () =>{
       loginForm.classList.toggle('active');

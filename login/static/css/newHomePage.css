@@ -77,14 +77,29 @@ section{
 
 .header{
     position: fixed;
-    top:0; left:0; right: 0;
+    top:2rem; left:0; right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:2rem 9%;
+    padding:0 9% 2rem 9%;
     background:#fff;
-    box-shadow: var(--box-shadow);
+}
+
+.display-message{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    height: 2rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top:.4rem;
+    background:#fff;
+}
+
+.display-message p{
+    font-size: 1.2rem;
 }
 
 .header .logo{
