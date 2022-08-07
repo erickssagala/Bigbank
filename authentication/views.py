@@ -52,7 +52,7 @@ def signup(request):
 
         myuser.save()
 
-        messages.success(request, "Account successfully created!\nWe have sent you a confirmation link, check your email to activate account")
+        messages.success(request, "Account successfully created! Check your email to activate account")
 
 
         #Welcome Email
